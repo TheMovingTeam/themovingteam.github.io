@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock">
+
+    <title>{{ title }}</title>
+
+    <link rel="preconnect" href="../styles">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/article.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="../">Move</a>
+        <a id="download" href="../">Sign up for the waitlist</a>
+    </nav>
+    <div class="container">
+        {{ content | safe }}
+    </div>
+    <footer>
+        <div class="hc">
+            <p class="logo">Move</p>
+            <p>Made with ❤️ with 11ty</p>
+        </div>
+        <div class="vc">
+            <a href="./">Privacy policy</a>
+            <a href="https://twitter.com/movetransit">Twitter</a>
+        </div>
+    </footer>
+</body>
+<script src="../src/main.js"></script>
+
+</html>

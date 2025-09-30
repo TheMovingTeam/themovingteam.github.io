@@ -1,0 +1,57 @@
+@import url("common.css");
+@import url("nav.css");
+@import url("footer.css");
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    background-color: rgba(from var(--primary-brand) r g b / 0.5);
+}
+
+.container {
+    max-width: 80ch;
+    padding: calc(var(--margin) / 2);
+    padding-top: calc(var(--margin) * 4);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito';
+}
+
+h1 {
+    --text-size: var(--text-large);
+    margin: 0;
+    margin-bottom: var(--margin);
+}
+
+h2 {
+    --text-size: var(--text-medium);
+    margin: calc(var(--margin) / 1.5);
+}
+
+p {
+    --text-size: var(--text-small);
+    margin: calc(var(--margin) / 1);
+}
+
+ul, ol {
+    margin: 0 calc(var(--margin) / 2);
+
+    &>* {
+        margin: calc(var(--margin) / 2) 0;
+        &>ul, &>ol {
+            margin: 0 !important;
+        }
+    }
+}
+
+blockquote {
+    margin: 0;
+    padding: calc(var(--margin) / 2) 0;
+    background-color: var(--background-container);
+    border-radius: 1rem;
+}

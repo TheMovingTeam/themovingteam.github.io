@@ -1,0 +1,34 @@
+@import url("common.css");
+@import url("nav.css");
+@import url("footer.css");
+
+html:not([data-scroll='0']) {
+    .logo {
+        opacity: 1 !important;
+    }
+}
+
+nav>.logo {
+    opacity: 0;
+}
+
+.heroContainer {
+    width: 100dvw;
+    height: 100dvh;
+
+    display: grid;
+    place-items: center;
+}
+
+#heroLogo {
+    --text-size: var(--text-hero);
+    font-family: 'Fredoka';
+    font-size: var(--text-size);
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+p {
+    --text-size: var(--text-small);
+    font-size: var(--text-size);
+}

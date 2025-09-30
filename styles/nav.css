@@ -1,0 +1,65 @@
+@import url("common.css");
+
+html:not([data-scroll='0']) {
+    & nav {
+        background-color: rgba(from var(--primary-brand) r g b / 0.75);
+        backdrop-filter: blur(20px);
+    }
+}
+
+nav {
+    transition: background-color 200ms;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    width: calc(100% - 2 * var(--margin));
+
+    background-color: transparent;
+    
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: space-between;
+
+    padding: calc(var(--margin) / 2) var(--margin);
+
+    & a {
+        text-decoration: none;
+        color: white;
+        
+        &.entry {
+            --text-size: var(--text-small);
+
+            font-weight: 400;
+            font-family: 'Nunito';
+        }
+
+        &#download {
+            --text-size: var(--text-small);
+
+            font-weight: 400;
+            font-family: 'Nunito';
+            letter-spacing: 1px;
+
+            padding: calc(var(--margin) / 2);
+            background-color: var(--primary-shadow);
+
+            border: 1px solid white;
+            border-radius: 6rem;
+
+            transition-duration: 200ms;
+
+            &:hover {
+                font-weight: 800;
+                letter-spacing: 0.6px;
+            }
+        }
+
+    }
+
+}
+
