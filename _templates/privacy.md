@@ -1,7 +1,7 @@
 ---
 layout: article.njk
 title: Move Privacy Policy
-updated: 29/09/2025
+updated: 30/09/2025
 ---
 
 # {{ title }}
