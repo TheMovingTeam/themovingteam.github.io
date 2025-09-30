@@ -76,7 +76,7 @@ We do not currently use cookies or any similar tracking technologies to access o
 
 ## 7. Is your information transferred internationally?
 
-We are based on Spain, if you are submitting the information mentioned in section 2 from outside the country, please be aware that your information may be transferred to, stored, and processed by us in our facilities.
+We are based in Spain, if you are submitting the information mentioned in section 2 from outside the country, please be aware that your information may be transferred to, stored, and processed by us in our facilities.
 
 If you are a resident in the European Economic Area (EEA) or United Kingdom (UK), then these countries may not necessarily have data protection laws or other similar laws as comprehensive as those in your country. However, we will take all necessary measures to protect your personal information in accordance with this privacy notice and applicable law.
 
