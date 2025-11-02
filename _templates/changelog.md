@@ -7,6 +7,16 @@ title: Move - Changelog
 
 Here are the latest changes for the Move app.
 
+## 0.11 - 
+
+> - Add search filters
+> - Add in-app changelog
+> - Fix parsing for Tranvía de Murcia
+> - Fix issues where EMT Madrid would interfere with other providers
+> - Fix favourite and recent stops not being purged when removing a provider
+> - Allow line emblems to properly utilize the free space
+> - UI fixes and improvements
+
 ## 0.10 - October 26, 2025
 
 > - Add support for Tranvía de Murcia
