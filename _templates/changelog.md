@@ -7,7 +7,7 @@ title: Move - Changelog
 
 Here are the latest changes for the Move app.
 
-## 0.11 - 
+## 0.11 - November 3, 2025
 
 > - Add search filters
 > - Add in-app changelog
