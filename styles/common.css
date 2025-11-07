@@ -1,3 +1,23 @@
+@media only screen and (width < 768px) {
+    :root {
+        --text-hero: 100px;
+        --text-large: 42px;
+        --text-medium: 32px;
+        --text-small: 16px;
+    }
+
+}
+
+@media only screen and (width > 768px) {
+    :root {
+        --text-hero: 120px;
+        --text-large: 48px;
+        --text-medium: 36px;
+        --text-small: 18px;
+    }
+
+}
+
 :root {
     /* Brand colors */
     --primary-brand: #9678B5;
@@ -11,10 +31,6 @@
 
     /* Sizes */
     --margin: 2rem;
-    --text-hero: 120px;
-    --text-large: 48px;
-    --text-medium: 36px;
-    --text-small: 18px;
 }
 
 body {
@@ -31,6 +47,7 @@ body {
 * {
     color: var(--text);
     font-size: var(--text-size);
+    font-family: sans-serif;
 }
 
 .logo {
@@ -65,3 +82,8 @@ body {
         flex-direction: row;
     }
 }
+
+.oh {
+    overflow: hidden;
+}
+

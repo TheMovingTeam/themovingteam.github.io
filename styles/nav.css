@@ -44,6 +44,7 @@ nav {
             font-weight: 400;
             font-family: 'Nunito';
             letter-spacing: 1px;
+            text-wrap: nowrap;
 
             padding: calc(var(--margin) / 2);
             background-color: var(--primary-shadow);
