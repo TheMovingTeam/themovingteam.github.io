@@ -38,27 +38,6 @@ nav {
             font-family: 'Nunito';
         }
 
-        &#download {
-            --text-size: var(--text-small);
-
-            font-weight: 400;
-            font-family: 'Nunito';
-            letter-spacing: 1px;
-            text-wrap: nowrap;
-
-            padding: calc(var(--margin) / 2);
-            background-color: var(--primary-shadow);
-
-            border: 1px solid white;
-            border-radius: 6rem;
-
-            transition-duration: 200ms;
-
-            &:hover {
-                font-weight: 800;
-                letter-spacing: 0.6px;
-            }
-        }
 
     }
 

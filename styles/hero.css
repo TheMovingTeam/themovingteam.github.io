@@ -15,9 +15,6 @@ nav>.logo {
 .heroContainer {
     width: 100dvw;
     height: 100dvh;
-
-    display: grid;
-    place-items: center;
 }
 
 #heroLogo {
@@ -26,6 +23,10 @@ nav>.logo {
     font-size: var(--text-size);
     font-weight: 600;
     letter-spacing: -0.2px;
+}
+
+#heroCTA {
+    margin-top: var(--margin);
 }
 
 p {
@@ -103,14 +104,12 @@ p {
 }
 
 .logoContainer {
-    position: absolute;
-    left: 50%;
-    display: grid;
-    place-items: center;
-    animation-timeline: scroll(block);
+    animation-timeline: view(y 60% 0%);
     animation-name: appear;
-    animation-timing-function: ease-out;
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
     filter: blur(var(--blur));
+    scale: 0;
 
     &>.shape {
         animation: rotate 6s linear forwards infinite;
@@ -137,14 +136,56 @@ p {
 
 @keyframes appear {
     from {
-        --blur: 40px;
+        --blur: 20px;
         scale: 0;
-        bottom: 0;
     }
-    50%, to {
-        --blur: 0px
+    to {
+        --blur: 0px;
         scale: 1;
-        bottom: 50%;
+    }
+}
+
+form {
+    --factor: 3;
+
+    max-width: 80ch;
+    margin: var(--margin) !important;
+
+    & p, & span {
+        align-self: flex-start
+    }
+
+    & .hc {
+        gap: 0;
+    }
+    
+    & input#email{
+        border: 2px solid var(--primary-brand);
+        border-right: none;
+        border-radius: calc(var(--margin) / 2) 0 0 calc(var(--margin) / 2);
+
+        padding: calc(var(--margin) / var(--factor));
+        margin: 0;
+    }
+    
+    & button#submit{
+        border: 2px solid var(--primary-brand);
+        border-left: none;
+        border-radius: 0 calc(var(--margin) / 2) calc(var(--margin) / 2) 0;
+
+        padding: calc(var(--margin) / var(--factor));
+        margin: 0;
+
+        background-color: var(--primary-shadow);
+        transition-duration: 200ms;
+
+        &:hover {
+            background-color: var(--primary-brand);
+        }
+    }
+
+    & .footnote {
+        opacity: .4;
     }
 }
 

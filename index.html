@@ -21,21 +21,11 @@
     <!--     <a class="entry" href="privacy/">Privacy policy</a> -->
     <!-- </nav> -->
 
-    <div class="heroContainer oh">
+    <div class="heroContainer oh gc" id="hero">
         <div class="vc">
             <h1 id="heroLogo">Move</h1>
             <p>The universal transit app</p>
-            <p>Sign up for the wait-list!</p>
-            <form
-                action="mailto:zazaguichi@outlook.com"
-                method="post"
-                enctype="multipart/form-data"
-                >
-                Email address:<br>
-                <input type="email" name="Contact-Email">
-                <button type="submit" value="Submit">Send</button><br><br>
-                <span class="footnote">It must be liked to your Google Play account</span>
-            </form>
+            <a id="heroCTA" class="accentButton" href="#sign-up">Sign up for the wait-list!</a>
         </div>
         <div class="blobContainer">
             <div class="blob large top-right light"></div>
@@ -44,10 +34,30 @@
         </div>
     </div>
 
-    <!-- <div class="logoContainer"> -->
-    <!--     <img class="shape" src="media/logo.svg" alt="Move's logo'"> -->
-    <!--     <img class="arrow" src="media/logo-arrow.svg" alt="Move's logo'"> -->
-    <!-- </div> -->
+    <section class="gc" id="features" style="position: relative;">
+        <div class="logoContainer gc">
+            <img class="shape" src="media/logo.svg" alt="Move's logo'">
+            <img class="arrow" src="media/logo-arrow.svg" alt="Move's logo'">
+        </div>
+    </section>
+
+    <section id="sign-up">
+        <div class="hc jc">
+            <form id="signForm" action="https://getform.io/f/bwnyplpa" method="post" enctype="multipart/form-data">
+                <div class="vc">
+                    <p>
+                        Email address:
+                    </p>
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                    <div class="hc">
+                        <input id="email" type="email" name="Email" placeholder="Email address" required>
+                        <button id="submit" type="submit" value="Submit">Send</button>
+                    </div>
+                    <span class="footnote">It must be liked to your Google Play account</span>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="hc">
