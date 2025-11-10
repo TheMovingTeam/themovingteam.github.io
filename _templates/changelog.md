@@ -9,6 +9,7 @@ Here are the latest changes for the Move app.
 
 ## 0.12 - TBD
 
+> - Add support for Transporte de Murcia
 > - Add support for Metrobus Valencia
 > - Add support for TMP Murcia
 > - Stability improvements for parsers
