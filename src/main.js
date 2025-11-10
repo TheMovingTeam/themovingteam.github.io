@@ -18,20 +18,15 @@ function storeScroll() {
 
     document.documentElement.dataset.scroll = scrollTop;
 
-    if (!CSS.supports('animation-timeline: view(y)')) {
-        const scrolled = Math.min(Math.max((scrollTop / ((scrollHeight - clientHeight) / 2.8))-1, 0), 1);
+    const scrolled = Math.min(Math.max((scrollTop / ((scrollHeight - clientHeight) / 2.8)) - 1, 0), 1);
 
-        console.log(scrolled)
-        
-        const scale = Math.min(0.8 * scrolled, 2);
-        const offset = Math.max(40 - (40 * scrolled), 10);
+    const scale = Math.min(0.8 * scrolled, 2);
+    const offset = Math.max(40 - (40 * scrolled), 10);
+    const blur = Math.max(40 - (60 * scrolled), 0)
 
-        const blur = Math.max(40 - (60 * scrolled), 0)
-
-        document.querySelector(".logoContainer").style.scale = `${scale}`;
-        document.querySelector(".logoContainer").style.translate = `0 ${offset}%`;
-        document.querySelector(".logoContainer").style.setProperty("--blur", `${blur}px`);
-    }
+    document.querySelector(".logoContainer").style.scale = `${scale}`;
+    document.querySelector(".logoContainer").style.translate = `0 ${offset}%`;
+    document.querySelector(".logoContainer").style.setProperty("--blur", `${blur}px`);
 }
 // Listen for new scroll events, here we debounce our `storeScroll` function
 document.addEventListener('scroll', debounce(storeScroll), { passive: true });

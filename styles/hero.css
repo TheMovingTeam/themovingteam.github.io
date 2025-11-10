@@ -114,16 +114,16 @@ p {
     initial-value: 0px;
 }
 
-@supports (animation-timeline: view(y)) {
-    .logoContainer {
-        animation-timeline: view(y 35% 45%);
-        animation-name: appear;
-        animation-duration: 1ms;
-        animation-fill-mode: forwards;
-        scale: 0;
-        --blur: 40px;
-    }
-}
+/* @supports (animation-timeline: view(y)) { */
+/*     .logoContainer { */
+/*         animation-timeline: view(y 35% 45%); */
+/*         animation-name: appear; */
+/*         animation-duration: 1ms; */
+/*         animation-fill-mode: forwards; */
+/*         scale: 0; */
+/*         --blur: 40px; */
+/*     } */
+/* } */
 
 .logoContainer {
     position: relative;
@@ -145,16 +145,6 @@ p {
         position: absolute;
         width: 80%;
         aspect-ratio: 1;
-    }
-}
-
-@keyframes rotate {
-    from {
-        rotate: 0turn;
-    }
-
-    to {
-        rotate: 1turn;
     }
 }
 
@@ -189,6 +179,7 @@ form {
     }
 
     & input#email {
+        width: 25ch;
         height: calc(var(--factor) - 4px);
         border: 2px solid var(--primary-brand);
         border-right: none;
@@ -271,5 +262,5 @@ form {
 }
 
 #features {
-    padding: var(--margin) 0;
+    padding: calc(var(--margin) * 2) 0;
 }

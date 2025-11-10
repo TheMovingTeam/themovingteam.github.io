@@ -156,3 +156,13 @@ section {
     background-color: var(--background-container);
     border-radius: 1rem;
 }
+
+@keyframes rotate {
+    from {
+        rotate: 0turn;
+    }
+
+    to {
+        rotate: 1turn;
+    }
+}
