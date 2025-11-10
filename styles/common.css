@@ -1,21 +1,31 @@
 @media only screen and (width < 768px) {
     :root {
+        --margin: 1.8rem;
         --text-hero: 100px;
         --text-large: 42px;
         --text-medium: 32px;
         --text-small: 16px;
     }
 
+    .hc.reflow {
+        flex-direction: column !important;
+    }
 }
 
 @media only screen and (width > 768px) {
     :root {
+        --margin: 2rem;
         --text-hero: 120px;
         --text-large: 48px;
         --text-medium: 36px;
         --text-small: 18px;
     }
+}
 
+@media (prefers-reduced-motion) {
+    * {
+        animation: none !important;
+    }
 }
 
 :root {
@@ -28,17 +38,14 @@
     --background-container: light-dark(#EDD, #363336);
 
     --text: light-dark(black, white);
-
-    /* Sizes */
-    --margin: 2rem;
 }
 
 body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    min-width: 100dvw;
-    min-height: 100dvh;
+    min-height: 100vh;
+    scrollbar-width: thin;
 
     background-color: var(--background);
     color-scheme: light dark;
@@ -47,7 +54,7 @@ body {
 * {
     color: var(--text);
     font-size: var(--text-size);
-    font-family: sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .logo {
@@ -76,6 +83,18 @@ body {
 
     &.jc {
         justify-content: center;
+    }
+
+    &.jsb {
+        justify-content: space-between;
+    }
+
+    &.jse {
+        justify-content: space-evenly;
+    }
+
+    &.ac {
+        align-items: center;
     }
 
     &:is(.vc) {
@@ -110,6 +129,7 @@ a.accentButton {
 
     border: 1px solid white;
     border-radius: 6rem;
+    color: white;
 
     transition-duration: 200ms;
 
@@ -117,9 +137,22 @@ a.accentButton {
         font-weight: 800;
         letter-spacing: 0.6px;
     }
+
+    &:active {
+        padding: calc(var(--margin) / 2.5);
+    }
 }
 
 section {
-    width: 100dvw;
-    height: 100dvh;
+    &.fs {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.card {
+    margin: 0;
+    padding: calc(var(--margin) / 2) 0;
+    background-color: var(--background-container);
+    border-radius: 1rem;
 }
