@@ -1,4 +1,4 @@
-@media only screen and (width < 768px) {
+@media only screen and (width < 950px) {
     :root {
         --margin: 1.8rem;
         --text-hero: 100px;
@@ -9,6 +9,10 @@
 
     .hc.reflow {
         flex-direction: column !important;
+        
+        & #unifyComposition, #screenshotComposition {
+            align-self: auto !important;
+        }
     }
 }
 
@@ -113,6 +117,10 @@ body {
 .gc {
     display: grid;
     place-items: center;
+}
+
+.tc {
+    text-align: center;
 }
 
 a.accentButton {

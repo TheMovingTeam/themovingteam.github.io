@@ -2,7 +2,7 @@
 @import url("nav.css");
 @import url("footer.css");
 
-@media only screen and (width < 768px) {
+@media only screen and (width < 950px) {
     .card {
         width: calc(100% - var(--margin)) !important;
         gap: 0 !important;
@@ -179,7 +179,7 @@ form {
     }
 
     & input#email {
-        width: 25ch;
+        width: min(60vw, 30ch);
         height: calc(var(--factor) - 4px);
         border: 2px solid var(--primary-brand);
         border-right: none;
@@ -269,6 +269,7 @@ form {
 #featureContainer {
     --featuresWidth: 40ch;
     width: var(--featuresWidth);
+    margin: 0 var(--margin);
 
     &>.featureEntry {
         min-width: var(--featuresWidth);
