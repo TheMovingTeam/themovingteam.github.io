@@ -9,6 +9,11 @@
         padding: 0 !important;
         padding-top: calc(var(--margin) / 2) !important;
     }
+
+    #featureContainer {
+        --featuresWidth: 30ch !important;
+        text-align: center;
+    }
 }
 
 
@@ -41,6 +46,12 @@ nav>.logo {
 
 p {
     --text-size: var(--text-small);
+    font-size: var(--text-size);
+}
+
+h2 {
+    --text-size: var(--text-medium);
+    font-family: 'Nunito' sans-serif;
     font-size: var(--text-size);
 }
 
@@ -113,17 +124,6 @@ p {
     inherits: true;
     initial-value: 0px;
 }
-
-/* @supports (animation-timeline: view(y)) { */
-/*     .logoContainer { */
-/*         animation-timeline: view(y 35% 45%); */
-/*         animation-name: appear; */
-/*         animation-duration: 1ms; */
-/*         animation-fill-mode: forwards; */
-/*         scale: 0; */
-/*         --blur: 40px; */
-/*     } */
-/* } */
 
 .logoContainer {
     position: relative;
@@ -263,4 +263,38 @@ form {
 
 #features {
     padding: calc(var(--margin) * 2) 0;
+}
+
+
+#featureContainer {
+    --featuresWidth: 40ch;
+    width: var(--featuresWidth);
+
+    &>.featureEntry {
+        min-width: var(--featuresWidth);
+        max-width: var(--featuresWidth);
+    }
+}
+
+#featureIndicator {
+    --size: 12px;
+    padding-top: calc(var(--margin) / 2);
+
+    &>.indicatorDot {
+        height: var(--size);
+        width: var(--size);
+
+        border-radius: calc(var(--size) / 2);
+
+        background-color: white;
+        opacity: 0.8;
+        transition-duration: 600ms;
+        transition-timing-function: cubic-bezier(0.68, 2.55, 0.62, 0.65);
+        box-shadow: 0px 3px rgb(from black r g b / 0.25);
+
+        &.active {
+            opacity: 1;
+            width: calc(var(--size) * 2);
+        }
+    }
 }

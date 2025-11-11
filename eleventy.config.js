@@ -6,6 +6,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.setLayoutsDirectory("../_layouts/");
     eleventyConfig.setOutputDirectory(".");
     
+    eleventyConfig.addWatchTarget("./src/*.js")
     eleventyConfig.addWatchTarget("./styles/*.css")
     eleventyConfig.addWatchTarget("./index.html")
     

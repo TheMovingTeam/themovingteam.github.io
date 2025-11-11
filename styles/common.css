@@ -155,6 +155,9 @@ section {
     padding: calc(var(--margin) / 2) 0;
     background-color: var(--background-container);
     border-radius: 1rem;
+
+    border-top: 1px solid rgb(from white r g b / 0.25);
+    border-bottom: 1px solid rgb(from white r g b / 0.1);
 }
 
 @keyframes rotate {

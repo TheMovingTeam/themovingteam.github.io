@@ -18,7 +18,14 @@ function storeScroll() {
 
     document.documentElement.dataset.scroll = scrollTop;
 
-    const scrolled = Math.min(Math.max((scrollTop / ((scrollHeight - clientHeight) / 2.8)) - 1, 0), 1);
+    var factor = 0
+    if (window.innerWidth > 768) {
+        factor = 2.8
+    } else {
+        factor = 4
+    }
+
+    const scrolled = Math.min(Math.max((scrollTop / ((scrollHeight - clientHeight) / factor)) - 1, 0), 1);
 
     const scale = Math.min(0.8 * scrolled, 2);
     const offset = Math.max(40 - (40 * scrolled), 10);
