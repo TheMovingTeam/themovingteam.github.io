@@ -1,11 +1,19 @@
 ---
 layout: article.njk
-title: Move - Changelog
+title: Changelog
 ---
 
-# Changelog
+# {{ title }}
 
 Here are the latest changes for the Move app.
+
+## 0.12 - November 12, 2025
+
+> - Add support for Transporte de Murcia
+> - Add support for Metrobus Valencia
+> - Add support for TMP Murcia
+> - Stability improvements for parsers
+> - UI fixes and improvements
 
 ## 0.11 - November 3, 2025
 

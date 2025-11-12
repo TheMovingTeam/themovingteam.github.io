@@ -1,0 +1,179 @@
+@media only screen and (width < 950px) {
+    :root {
+        --margin: 1.8rem;
+        --text-hero: 100px;
+        --text-large: 42px;
+        --text-medium: 32px;
+        --text-small: 16px;
+    }
+
+    .hc.reflow {
+        flex-direction: column !important;
+        
+        & #unifyComposition, #screenshotComposition {
+            align-self: auto !important;
+        }
+    }
+}
+
+@media only screen and (width > 768px) {
+    :root {
+        --margin: 2rem;
+        --text-hero: 120px;
+        --text-large: 48px;
+        --text-medium: 36px;
+        --text-small: 18px;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    * {
+        animation: none !important;
+    }
+}
+
+:root {
+    /* Brand colors */
+    --primary-brand: #9678B5;
+    --primary-shadow: #6A5580;
+
+    /* Utility colors */
+    --background: light-dark(#FEE, #242224);
+    --background-container: light-dark(#EDD, #363336);
+
+    --text: light-dark(black, white);
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    scrollbar-width: thin;
+
+    background-color: var(--background);
+    color-scheme: light dark;
+}
+
+* {
+    color: var(--text);
+    font-size: var(--text-size);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.logo {
+    transition: opacity 200ms;
+
+    --text-size: var(--text-large);
+
+    font-family: 'Fredoka';
+    font-weight: 600;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.vc,
+.hc {
+    display: flex;
+    align-items: center;
+
+    gap: calc(var(--margin) / 2);
+
+    & * {
+        margin: 0;
+        padding: 0;
+    }
+
+    &.jc {
+        justify-content: center;
+    }
+
+    &.jsb {
+        justify-content: space-between;
+    }
+
+    &.jse {
+        justify-content: space-evenly;
+    }
+
+    &.ac {
+        align-items: center;
+    }
+
+    &:is(.vc) {
+        flex-direction: column;
+    }
+
+    &:is(.hc) {
+        flex-direction: row;
+    }
+}
+
+.oh {
+    overflow: hidden;
+}
+
+.gc {
+    display: grid;
+    place-items: center;
+}
+
+.tc {
+    text-align: center;
+}
+
+a.accentButton {
+    --text-size: var(--text-small);
+
+    font-weight: 400;
+    font-family: 'Nunito';
+    letter-spacing: 1px;
+    text-wrap: nowrap;
+    text-decoration: none;
+
+    padding: calc(var(--margin) / 2);
+    background-color: var(--primary-shadow);
+
+    border: 1px solid white;
+    border-radius: 6rem;
+    color: white;
+
+    transition-duration: 200ms;
+
+    &:hover {
+        font-weight: 800;
+        letter-spacing: 0.6px;
+    }
+
+    &:active {
+        padding: calc(var(--margin) / 2.5);
+    }
+}
+
+section {
+    &.fs {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+.card {
+    margin: 0;
+    padding: calc(var(--margin) / 2) 0;
+    background-color: var(--background-container);
+    border-radius: 1rem;
+
+    border-top: 1px solid rgb(from white r g b / 0.25);
+    border-bottom: 1px solid rgb(from white r g b / 0.1);
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0turn;
+    }
+
+    to {
+        rotate: 1turn;
+    }
+}

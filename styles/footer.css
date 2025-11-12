@@ -1,4 +1,16 @@
-@import url("common.css");
+@media only screen and (width < 768px) {
+    :root {
+        --scale: 1;
+    }
+}
+
+@media only screen and (width > 768px) {
+    :root {
+        --scale: 2;
+    }
+
+}
+
 
 footer {
     width: calc(100% - var(--margin));
@@ -6,7 +18,10 @@ footer {
 
     padding: calc(var(--margin) / 4) calc(var(--margin) / 2);
     margin-top: var(--margin);
-    
+
+    position: relative;
+    overflow: hidden;
+
     &>.vc {
         margin: calc(var(--margin) / 2) var(--margin);
         align-items: start;
@@ -20,5 +35,23 @@ footer {
         width: 100%;
         justify-content: space-between;
         align-items: center;
+    }
+
+    & * {
+        color: white
+    }
+
+    &>.shape {
+        position: absolute;
+
+        right: 0;
+        bottom: 0;
+
+        translate: 25% 25%;
+        scale: var(--scale);
+
+        animation: rotate 12s linear forwards infinite;
+        mix-blend-mode: soft-light;
+        opacity: 0.25;
     }
 }

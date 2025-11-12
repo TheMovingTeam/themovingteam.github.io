@@ -1,6 +1,6 @@
 ---
 layout: article.njk
-title: Move - Privacy Policy
+title: Privacy Policy
 updated: 30/09/2025
 ---
 

@@ -38,18 +38,13 @@ jobs:
         run: |
           npm ci
           npm run build
-          # Clean up folders
-          rm -rf node_modules
-          rm -rf _layouts
-          rm -rf _templates
-          rm eleventy.config.js package-lock.json package.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          path: './_build/'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

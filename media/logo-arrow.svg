@@ -1,0 +1,44 @@
+<svg width="300" xmlns="http://www.w3.org/2000/svg" height="300"
+    id="screenshot-fd678bec-1470-80af-8006-f2d33cefa2fb" viewBox="0 0 300 300"
+    xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+    <g id="shape-fd678bec-1470-80af-8006-f2d30b4f8c8c">
+        <g class="fills" id="fills-fd678bec-1470-80af-8006-f2d30b4f8c8c">
+            <path d="M79.498046875,149.999755859375L220.501953125,149.999755859375" />
+        </g>
+        <g
+            id="strokes-8b31b9f7-0826-8009-8007-12be1a5e0234-fd678bec-1470-80af-8006-f2d30b4f8c8c"
+            class="strokes">
+            <g class="stroke-shape">
+                <path d="M79.498046875,149.999755859375L220.501953125,149.999755859375"
+                    style="fill: none; stroke-width: 18; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-linecap: round;" />
+            </g>
+        </g>
+    </g>
+    <g id="shape-fd678bec-1470-80af-8006-f2d30b4f8c8d">
+        <g class="fills" id="fills-fd678bec-1470-80af-8006-f2d30b4f8c8d">
+            <path d="M220.501953125,151.0000762939453L154.49951171875,210.0009765625" />
+        </g>
+        <g
+            id="strokes-8b31b9f7-0826-8009-8007-12be1a5e9573-fd678bec-1470-80af-8006-f2d30b4f8c8d"
+            class="strokes">
+            <g class="stroke-shape">
+                <path d="M220.501953125,151.0000762939453L154.49951171875,210.0009765625"
+                    style="fill: none; stroke-width: 18; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-linecap: round;" />
+            </g>
+        </g>
+    </g>
+    <g id="shape-fd678bec-1470-80af-8006-f2d30b4f8c8e">
+        <g class="fills" id="fills-fd678bec-1470-80af-8006-f2d30b4f8c8e">
+            <path d="M154.49951171875,89.9989013671875L220.501953125,149.999755859375" />
+        </g>
+        <g
+            id="strokes-8b31b9f7-0826-8009-8007-12be1a5f0153-fd678bec-1470-80af-8006-f2d30b4f8c8e"
+            class="strokes">
+            <g class="stroke-shape">
+                <path d="M154.49951171875,89.9989013671875L220.501953125,149.999755859375"
+                    style="fill: none; stroke-width: 18; stroke: rgb(255, 255, 255); stroke-opacity: 1; stroke-linecap: round;" />
+            </g>
+        </g>
+    </g>
+
+</svg>
