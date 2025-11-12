@@ -7,7 +7,7 @@ title: Changelog
 
 Here are the latest changes for the Move app.
 
-## 0.12 - TBD
+## 0.12 - November 12, 2025
 
 > - Add support for Transporte de Murcia
 > - Add support for Metrobus Valencia

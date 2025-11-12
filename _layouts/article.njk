@@ -1,52 +1,12 @@
-<!doctype html>
-<html lang="en">
+---
+layout: ./main.njk
+style: article
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="darkreader-lock">
+<div class="container">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+</div>
 
-    <title>Move - {{ title }}</title>
-
-    <link rel="preconnect" href="/styles">
-    <link rel="stylesheet" href="/styles/article.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
-</head>
-
-<body>
-    <nav>
-        <a class="logo" href="/">Move</a>
-        <div class="hc">
-            <a href="/privacy/">Privacy policy</a>
-            <a href="/changelog/">Changelog</a>
-            <a class="accentButton" href="/#sign-up">Sign up for the waitlist</a>
-        </div>
-    </nav>
-    <div class="container">
-        {{ content | safe }}
-    </div>
-    <footer>
-        <div class="shape">
-            <img src="/media/CookieShape.svg" alt="">
-        </div>
-        <div class="hc">
-            <p class="logo">Move</p>
-            <p>Made with ❤️ with 11ty</p>
-        </div>
-        <div class="vc">
-            <!-- <a href="/about/">About</a> -->
-            <a href="/privacy/">Privacy policy</a>
-            <a href="/changelog/">Changelog</a>
-            <a href="https://twitter.com/movetransit">Twitter</a>
-        </div>
-    </footer>
-</body>
 <script src="/src/main.js"></script>
-
-</html>
+<script src="/src/links.js"></script>

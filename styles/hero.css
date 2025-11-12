@@ -1,6 +1,4 @@
-@import url("common.css");
-@import url("nav.css");
-@import url("footer.css");
+@import url("main.css");
 
 @media only screen and (width < 950px) {
     .card {

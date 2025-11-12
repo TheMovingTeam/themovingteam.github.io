@@ -1,9 +1,0 @@
-@import url("nav.css");
-@import url("footer.css");
-@import url("article.css");
-
-.card {
-    width: 80%;
-    padding: var(--margin);
-    gap: calc(var(--margin) / 2);
-}

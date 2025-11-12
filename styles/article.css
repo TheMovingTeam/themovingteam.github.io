@@ -1,3 +1,4 @@
+@import url("main.css");
 @import url("nav.css");
 @import url("footer.css");
 
@@ -15,6 +16,12 @@ nav {
     width: min(80%, 80ch);
     padding: calc(var(--margin) / 2);
     padding-top: calc(var(--margin) * 4);
+}
+
+.card {
+    width: 80%;
+    padding: var(--margin);
+    gap: calc(var(--margin) / 2);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,4 +65,12 @@ blockquote {
     padding: calc(var(--margin) / 2) 0;
     background-color: var(--background-container);
     border-radius: 1rem;
+}
+
+img {
+    border-radius: var(--margin);
+}
+
+.linkTag {
+    opacity: 0.4;
 }
