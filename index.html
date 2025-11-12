@@ -7,8 +7,11 @@
     <meta name="darkreader-lock">
     <title>Move - Universal transit</title>
 
-    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="preconnect" href="/styles">
+    <link rel="preconnect" href="/media">
+    <link rel="stylesheet" href="/styles/hero.css">
+    
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,10 +75,10 @@
             </div>
             <div class="composition frame" id="unifyComposition">
                 <div class="logoContainer gc">
-                    <img class="shape" src="media/logo.svg" alt="Move's logo'">
-                    <img class="arrow" src="media/logo-arrow.svg" alt="Move's logo'">
+                    <img class="shape" src="/media/logo.svg" alt="Move's logo'">
+                    <img class="arrow" src="/media/logo-arrow.svg" alt="Move's logo'">
                 </div>
-                <img src="media/mobile_frame.png" alt="">
+                <img src="/media/mobile_frame.png" alt="">
             </div>
         </div>
     </section>
@@ -98,29 +101,30 @@
             <!--     </div> -->
             <!-- </form> -->
             <div class="composition" id="screenshotComposition" class="gc">
-                <img class="frame" src="media/screenshots/1.png" alt="">
-                <img src="media/mobile_frame.png" alt="">
+                <img class="frame" src="/media/screenshots/1.png" alt="">
+                <img src="/media/mobile_frame.png" alt="">
             </div>
         </div>
     </section>
 
     <footer>
         <div class="shape">
-            <img src="media/CookieShape.svg" alt="">
+            <img src="/media/CookieShape.svg" alt="">
         </div>
         <div class="hc">
             <p class="logo">Move</p>
             <p>Made with ❤️ with 11ty</p>
         </div>
         <div class="vc">
-            <a href="./privacy/">Privacy policy</a>
-            <a href="./changelog/">Changelog</a>
+            <!-- <a href="/about/">About</a> -->
+            <a href="/privacy/">Privacy policy</a>
+            <a href="/changelog/">Changelog</a>
             <a href="https://twitter.com/movetransit">Twitter</a>
         </div>
     </footer>
 </body>
-<script src="./src/main.js"></script>
-<script src="./src/form.js"></script>
-<script src="./src/carrousel.js"></script>
+<script src="/src/main.js"></script>
+<script src="/src/form.js"></script>
+<script src="/src/carrousel.js"></script>
 
 </html>

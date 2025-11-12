@@ -1,9 +1,9 @@
 ---
 layout: article.njk
-title: Move - Changelog
+title: Changelog
 ---
 
-# Changelog
+# {{ title }}
 
 Here are the latest changes for the Move app.
 
