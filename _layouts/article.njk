@@ -1,12 +1,9 @@
 ---
 layout: ./main.njk
-style: article
 ---
 
 <div class="container">
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+    <heading-anchors selector="h1,h2">
+        {{ content | safe }}
+    </heading-anchors>
 </div>
-
-<script src="/src/main.js"></script>
-<script src="/src/links.js"></script>

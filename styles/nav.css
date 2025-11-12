@@ -15,7 +15,7 @@ nav {
 
     width: calc(100% - 2 * var(--margin));
 
-    background-color: transparent;
+    background-color: rgba(from var(--primary-brand) r g b / 0.45);
     
     display: flex;
     flex-direction: row;

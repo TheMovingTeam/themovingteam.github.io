@@ -1,4 +1,5 @@
 import { IdAttributePlugin } from "@11ty/eleventy"
+import { minify } from "terser";
 
 export default async function(eleventyConfig) {
     // Folders
@@ -6,17 +7,26 @@ export default async function(eleventyConfig) {
     eleventyConfig.setLayoutsDirectory("../_layouts/");
     eleventyConfig.setOutputDirectory("./_build");
 
-    eleventyConfig.addPassthroughCopy("./src/*")
-    eleventyConfig.addPassthroughCopy("./styles/*")
+    // eleventyConfig.addPassthroughCopy("./styles/*")
     eleventyConfig.addPassthroughCopy("./media/*")
     eleventyConfig.addPassthroughCopy("./media/screenshots/*")
-    
+
     eleventyConfig.addWatchTarget("./src/*.js")
     eleventyConfig.addWatchTarget("./styles/*.css")
     eleventyConfig.addWatchTarget("./index.html")
-    
+
     // Plugins
     eleventyConfig.addPlugin(IdAttributePlugin);
-};
 
+    eleventyConfig.addFilter("jsmin", async function(code) {
+        try {
+            const minified = await minify(code);
+            return minified.code;
+        } catch (err) {
+            console.error("Terser error: ", err);
+            // Fail gracefully.
+            return code;
+        }
+    });
+};
 

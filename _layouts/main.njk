@@ -8,7 +8,6 @@
 
     <title>Move - {{ title }}</title>
 
-    <link rel="preconnect" href="/styles">
     <link rel="preconnect" href="/media">
     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
 
@@ -18,11 +17,30 @@
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles/{{ style }}.css">
+    {% set css %}
+    {% include "../styles/main.css" %}
+    {% include "../styles/footer.css" %}
+
+    {%- if isHero %}
+
+    {% include "../styles/hero.css" %}
+
+    {%- else %}
+    {% include "../styles/article.css" %}
+    {% include "../styles/nav.css" %}
+    {%- endif %}
+
+    {% endset %}
+
+    <style>
+        {{ css | safe }}
+    </style>
 </head>
 
+
+
 <body>
-    {% if hero not in style %}
+    {% if not isHero %}
     {% include "./nav.njk" %}
     {% endif %}
 
@@ -30,3 +48,33 @@
 
     {% include "./footer.njk" %}
 </body>
+
+{% set js %}
+{# Always include #}
+{% include "../src/main.js"%}
+
+{%- if isHero %}
+
+{% include "../src/form.js"%}
+{% include "../src/carrousel.js"%}
+
+{%- endif %}
+
+{% endset %}
+
+<script>
+    {{js | jsmin | safe}}
+</script>
+
+{%- if not isHero %}
+{% set jsasync%}
+{% include "../node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
+{% endset%}
+
+<script type="module">
+    {{jsasync | jsmin | safe}}
+</script>
+
+{%- endif %}
+
+</html>

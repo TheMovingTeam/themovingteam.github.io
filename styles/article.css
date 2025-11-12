@@ -1,7 +1,3 @@
-@import url("main.css");
-@import url("nav.css");
-@import url("footer.css");
-
 body {
     display: flex;
     flex-direction: column;
@@ -25,7 +21,7 @@ nav {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nunito';
+    font-family: 'Nunito', sans-serif;
 }
 
 h1 {
@@ -71,6 +67,7 @@ img {
     border-radius: var(--margin);
 }
 
-.linkTag {
-    opacity: 0.4;
+.ha-placeholder, .ha {
+    transition-property: opacity;
+    transition-duration: 250ms;
 }
