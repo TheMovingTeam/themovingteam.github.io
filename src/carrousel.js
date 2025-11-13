@@ -3,10 +3,15 @@ const featureIndicator = document.getElementById('featureIndicator')
 
 var index = 0
 
-Array.from(featureContainer.children).forEach(featureElement => {
-
+const entries = document.getElementsByClassName('featureEntry')
+Array.from(entries).forEach(featureElement => {
     featureElement.id = `feature${index}`
+    index++
+})
 
+index = 0
+
+Array.from(featureContainer.children).forEach(() => {
     const indicator = document.createElement("div")
     indicator.classList.add("indicatorDot")
     if (index == 0) {

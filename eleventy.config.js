@@ -4,10 +4,9 @@ import { minify } from "terser";
 export default async function(eleventyConfig) {
     // Folders
     eleventyConfig.setInputDirectory("pages/*.md");
-    eleventyConfig.setLayoutsDirectory("../_layouts/");
+    eleventyConfig.setLayoutsDirectory("../layouts/");
     eleventyConfig.setOutputDirectory("./_build");
 
-    // eleventyConfig.addPassthroughCopy("./styles/*")
     eleventyConfig.addPassthroughCopy("./media/*")
     eleventyConfig.addPassthroughCopy("./media/screenshots/*")
 

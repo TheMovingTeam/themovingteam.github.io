@@ -1,49 +1,55 @@
 ---
-layout: article.njk
-title: About
+layout: about.njk
+title: About Move
 ---
 
 # {{ title }}
 
-Lorem ipsum dolor sit amet.
+Move was started as a solo project by FatDawlf out of a frustration with their local bus app being annoyingly slow to open and clunky to use.
 
-## Mision
+The idea to make a replacement quickly evolved into the univeral app we aim to build now.
 
-Bla bla bla
+## Mission
+
+The mission of Move is to make using public transit as straightforward and easy as possible.
+To create a simple and unified experience instead of fiddling with multiple apps. 
 
 ## Vision
 
-Buses should be good.
+Bringing a consistent experience to all services will empower people to choose public transit over cars, reducing the usage of cars and carbon emissions.
+
+Move aims to make a better future by removing the friction to acquire the good habits our planet needs.
 
 ## Values
 
-<div class="hc reflow">
+Move follows values to steer our work.
+
+<div id="valueCardsMd" class="hc reflow fw">
 
 <div class="card vc jse">
-<h3>
-    Efficiency
-</h3>
-<p>
-    Description moment
-</p>
+
+### Efficient
+
+Make solutions that work fast and lean, avoiding complexity when it's not required.
+
 </div>
 
 <div class="card vc jse">
-<h3>
-    Efficiency
-</h3>
-<p>
-    Description moment
-</p>
+
+### Product first
+
+Make solutions that work without the need of a centralized server.
+
+Move aims to be data driven so that it may remain useful even after support ends.
+
 </div>
 
 <div class="card vc jse">
-<h3>
-    Efficiency
-</h3>
-<p>
-    Description moment
-</p>
+
+### Universal
+
+Make solutions that work for everyone, meeting people where they are and providing the flexibility they need.
+
 </div>
 
 </div>

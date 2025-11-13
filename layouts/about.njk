@@ -1,0 +1,12 @@
+---
+layout: ./main.njk
+isAbout: true
+---
+
+<div class="container">
+    <heading-anchors selector="h1,h2">
+        {{ content | safe }}
+    </heading-anchors>
+</div>
+
+<div id="valueCards" class="hc reflow"></div>
