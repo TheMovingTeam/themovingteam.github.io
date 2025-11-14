@@ -1,9 +1,14 @@
-@media only screen and (width < 768px) {
+@media only screen and (width < 427px) {
+    .container {
+        padding-top: calc(var(--margin) * 7) !important;
+    }
+}
+
+@media only screen and (427px < width < 950px) {
     .container {
         padding-top: calc(var(--margin) * 6) !important;
     }
 }
-
 
 body {
     display: flex;
@@ -63,14 +68,8 @@ ul, ol {
     }
 }
 
-blockquote {
-    margin: 0;
-    padding: calc(var(--margin) / 2) 0;
-    background-color: var(--background-container);
-    border-radius: 1rem;
-}
-
 img {
+    width: 100%;
     border-radius: var(--margin);
 }
 

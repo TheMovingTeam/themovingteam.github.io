@@ -10,6 +10,10 @@
         --featuresWidth: 30ch !important;
         text-align: center;
     }
+
+    #featureIndicator {
+        margin-bottom: 0 !important;
+    }
 }
 
 
@@ -60,8 +64,7 @@ h2 {
     width: 100vw;
     height: 100vh;
 
-    filter: blur(80px);
-    overflow: hidden;
+    filter: blur(30px) opacity(0.25);
 }
 
 .blob {
@@ -112,13 +115,16 @@ h2 {
     &.dark {
         background-color: var(--primary-shadow);
     }
-}
 
+    &.shape {
+        border-radius: 0;
 
-@property --blur {
-    syntax: "<size>";
-    inherits: true;
-    initial-value: 0px;
+        &>img {
+            width: 100% !important;
+            animation: rotate 6s linear forwards infinite;
+            filter: invert(57%) sepia(37%) saturate(472%) hue-rotate(227deg) brightness(83%) contrast(82%);
+        }
+    }
 }
 
 .logoContainer {
@@ -141,20 +147,6 @@ h2 {
         position: absolute;
         width: 80%;
         aspect-ratio: 1;
-    }
-}
-
-@keyframes appear {
-    from {
-        --blur: 20px;
-        scale: 0;
-        translate: 0 40%;
-    }
-
-    to {
-        --blur: 0px;
-        scale: 0.8;
-        translate: 0 10%;
     }
 }
 
@@ -265,7 +257,8 @@ form {
 #featureContainer {
     --featuresWidth: 40ch;
     width: var(--featuresWidth);
-    margin: 0 var(--margin);
+    margin: var(--margin);
+    margin-bottom: 0;
 
     &>.featureEntry {
         min-width: var(--featuresWidth);
@@ -276,17 +269,19 @@ form {
 #featureIndicator {
     --size: 12px;
     padding-top: calc(var(--margin) / 2);
+    margin-bottom: var(--margin);
 
     &>.indicatorDot {
         height: var(--size);
         width: var(--size);
 
+        cursor: pointer;
+
         border-radius: calc(var(--size) / 2);
 
         background-color: white;
         opacity: 0.8;
-        transition-duration: 600ms;
-        transition-timing-function: cubic-bezier(0.68, 2.55, 0.62, 0.65);
+        transition-duration: 0.4s;
         box-shadow: 0px 3px rgb(from black r g b / 0.25);
 
         &.active {

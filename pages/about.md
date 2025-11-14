@@ -26,7 +26,7 @@ Move follows values to steer our work.
 
 <div id="valueCardsMd" class="hc reflow fw">
 
-<div class="card vc jse">
+<div class="card vc">
 
 ### Efficient
 
@@ -34,7 +34,7 @@ Make solutions that work fast and lean, avoiding complexity when it's not requir
 
 </div>
 
-<div class="card vc jse">
+<div class="card vc">
 
 ### Product first
 
@@ -44,7 +44,7 @@ Move aims to be data driven so that it may remain useful even after support ends
 
 </div>
 
-<div class="card vc jse">
+<div class="card vc">
 
 ### Universal
 
