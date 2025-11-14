@@ -30,6 +30,10 @@
     {% include "../styles/nav.css" %}
     {%- endif %}
 
+    {%- if isAbout %}
+    {% include "../styles/about.css" %}
+    {%- endif %}
+
     {% endset %}
 
     <style>
@@ -41,12 +45,12 @@
 
 <body>
     {% if not isHero %}
-    {% include "./nav.njk" %}
+    {% include "./components/nav.njk" %}
     {% endif %}
 
     {{ content | safe }}
 
-    {% include "./footer.njk" %}
+    {% include "./components/footer.njk" %}
 </body>
 
 {% set js %}
@@ -58,6 +62,10 @@
 {% include "../src/form.js"%}
 {% include "../src/carrousel.js"%}
 
+{%- endif %}
+    
+{%- if isAbout %}
+{% include "../src/switcheroo.js"%}
 {%- endif %}
 
 {% endset %}

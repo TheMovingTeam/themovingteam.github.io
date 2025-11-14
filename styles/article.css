@@ -1,3 +1,15 @@
+@media only screen and (width < 427px) {
+    .container {
+        padding-top: calc(var(--margin) * 7) !important;
+    }
+}
+
+@media only screen and (427px < width < 950px) {
+    .container {
+        padding-top: calc(var(--margin) * 6) !important;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,13 +21,13 @@ nav {
 }
 
 .container {
-    width: min(80%, 80ch);
+    width: min(90%, 80ch);
     padding: calc(var(--margin) / 2);
     padding-top: calc(var(--margin) * 4);
 }
 
 .card {
-    width: 80%;
+    width: 100%;
     padding: var(--margin);
     gap: calc(var(--margin) / 2);
 }
@@ -56,14 +68,8 @@ ul, ol {
     }
 }
 
-blockquote {
-    margin: 0;
-    padding: calc(var(--margin) / 2) 0;
-    background-color: var(--background-container);
-    border-radius: 1rem;
-}
-
 img {
+    width: 100%;
     border-radius: var(--margin);
 }
 

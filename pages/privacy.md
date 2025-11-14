@@ -1,14 +1,14 @@
 ---
 layout: article.njk
 title: Privacy Policy
-updated: 30/09/2025
+updated: 14/11/2025
 ---
 
-# Privacy notice
+# {{ title }}
 
 Last updated: {{ updated }}
 
-This article describes how your data may be collected, stored used, and/or shared ("processed") when using Move ("the application", "the app", etc) or any services from the Move Team ("we", "us", etc).
+This article describes how your data may be collected, stored used, and/or shared ("processed") when using Move ("the application", "the app", etc.) or any services from the Move Team ("we", "us", etc.).
 
 ## TL;DR
 
@@ -19,9 +19,9 @@ This article describes how your data may be collected, stored used, and/or share
 ## 1. What information is collected?
 Move in itself works almost entirely locally, user data is saved locally and any external information is downloaded and kept locally.
 
-We however reserve the right to utilize the following informaton when provided by you:
+We however reserve the right to utilize the following information when provided by you:
 
-> - Email adresses
+> - Email addresses
 > - Location information
 > - Usage information
 
@@ -29,7 +29,7 @@ We however reserve the right to utilize the following informaton when provided b
 
 This information would be used in the following ways:
 
-> - Email and other contact information may be used to add the user to mailing lists, newsletter or beta testing queues
+> - Email and other contact information may be used to add the user to mailing lists, newsletter, or beta testing queues
 > - Additional context provided upon reporting issues with the application's functionality to provide support and bugfixes
 > - Some of the transit providers supported by the app may log anonymized traffic telemetry of their servers outside of Move's control.
 
@@ -40,7 +40,7 @@ The General Data Protection Regulation (GDPR) and UK GDPR require us to explain 
 > - **Consent**. We may process your information if you have given us permission (i.e., consent) to use your personal information for a specific purpose. You can withdraw your consent at any time.
 > - **Performance of a Contract**. We may process your personal information when we believe it is necessary to fulfill our contractual obligations to you, including providing our Services or at your request prior to entering into a contract with you.
 > - **Legitimate Interests**. We may process your information when we believe it is reasonably necessary to achieve our legitimate business interests and those interests do not outweigh your interests and fundamental rights and freedoms. For example, we may process your personal information for some of the purposes described in order to: 
->    - Analyze how the app is used so we can improve it's functionality
+>    - Analyze how the app is used so we can improve its functionality
 >    - Support our marketing activities
 >    - Diagnose problems in the application
 > - **Legal Obligations**. We may process your information where we believe it is necessary for compliance with our legal obligations, such as to cooperate with a law enforcement body or regulatory agency, exercise or defend our legal rights, or disclose your information as evidence in litigation in which we are involved.
