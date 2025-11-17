@@ -1,10 +1,13 @@
 @media only screen and (width < 950px) {
     :root {
         --margin: 1.8rem;
+        
         --text-hero: 100px;
         --text-large: 42px;
         --text-medium: 32px;
         --text-small: 16px;
+        
+        --img-size: 64px;
     }
 
     .hc.reflow {
@@ -19,10 +22,13 @@
 @media only screen and (width > 768px) {
     :root {
         --margin: 2rem;
+        
         --text-hero: 120px;
         --text-large: 48px;
         --text-medium: 36px;
         --text-small: 18px;
+        
+        --img-size: 86px;
     }
 }
 
@@ -64,9 +70,12 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.logo {
-    transition: opacity 200ms;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+}
 
+
+.logo {
     --text-size: var(--text-large);
 
     font-family: 'Fredoka';
@@ -75,7 +84,8 @@ body {
     user-select: none;
     -webkit-user-select: none;
 
-    transition-property: text-shadow, translate;
+    transition-property: text-shadow, translate, opacity, font-size, filter;
+    transition-timing-function: ease-out;
     transition-delay: 0.1s;
     transition-duration: 0.2s;
 

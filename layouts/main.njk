@@ -19,9 +19,8 @@
         rel="stylesheet">
 
     {% set css %}
-    {% include "../styles/main.css" %}
-    {% include "../styles/footer.css" %}
-    {% include "../styles/nav.css" %}
+    
+    {% include "../styles/common.css" %}
 
     {%- if isHero %}
     {% include "../styles/hero.css" %}
@@ -32,6 +31,9 @@
     {%- if isAbout %}
     {% include "../styles/about.css" %}
     {%- endif %}
+
+    {% include "../styles/footer.css" %}
+    {% include "../styles/nav.css" %}
 
     {% endset %}
 
@@ -51,8 +53,9 @@
 </body>
 
 {% set js %}
+
 {# Always include #}
-{% include "../src/main.js"%}
+{% include "../src/scroll.js"%}
 
 {%- if isHero %}
 

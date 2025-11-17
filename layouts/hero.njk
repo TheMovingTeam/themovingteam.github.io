@@ -32,6 +32,26 @@ isHero: true
     </div>
 </section>
 
+<section class="gc" id="supportedProviders">
+    <div class="vc">
+    <h2>Supported Providers</h2>
+    <div class="hc jc" id="providerScroller">
+            {% for provider in providers %}
+            <img src="/media/providers/{{ provider.id }}.png" alt="{{ provider.name }}" title="{{ provider.name }}" loading="lazy">
+            {% endfor %}
+            {% for provider in providers %}
+            <img src="/media/providers/{{ provider.id }}.png" alt="{{ provider.name }}" title="{{ provider.name }}" loading="lazy">
+            {% endfor %}
+            {% for provider in providers %}
+            <img src="/media/providers/{{ provider.id }}.png" alt="{{ provider.name }}" title="{{ provider.name }}" loading="lazy">
+            {% endfor %}
+            {% for provider in providers %}
+            <img src="/media/providers/{{ provider.id }}.png" alt="{{ provider.name }}" title="{{ provider.name }}" loading="lazy">
+            {% endfor %}
+        </div>    
+    </div>
+</section>
+
 <section id="sign-up" class="gc">
     <div class="hc ac reflow jse card">
         <p>Sign-ups coming soon!</p>

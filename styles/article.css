@@ -32,10 +32,6 @@ nav {
     gap: calc(var(--margin) / 2);
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Nunito', sans-serif;
-}
-
 h1 {
     --text-size: var(--text-large);
     margin: 0;

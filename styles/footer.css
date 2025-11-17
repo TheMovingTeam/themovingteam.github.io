@@ -13,10 +13,9 @@
 
 
 footer {
-    width: calc(100% - var(--margin));
     background-color: var(--primary-shadow);
 
-    padding: calc(var(--margin) / 4) calc(var(--margin) / 2);
+    padding: calc(var(--margin) / 2) var(--margin);
     margin-top: var(--margin);
 
     position: relative;
