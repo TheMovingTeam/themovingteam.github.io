@@ -20,6 +20,7 @@
     {% set css %}
     {% include "../styles/main.css" %}
     {% include "../styles/footer.css" %}
+    {% include "../styles/nav.css" %}
 
     {%- if isHero %}
 
@@ -27,7 +28,6 @@
 
     {%- else %}
     {% include "../styles/article.css" %}
-    {% include "../styles/nav.css" %}
     {%- endif %}
 
     {%- if isAbout %}
@@ -44,9 +44,7 @@
 
 
 <body>
-    {% if not isHero %}
     {% include "./components/nav.njk" %}
-    {% endif %}
 
     {{ content | safe }}
 
@@ -75,9 +73,9 @@
 </script>
 
 {%- if not isHero %}
-{% set jsasync%}
+{% set jsasync %}
 {% include "../node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
-{% endset%}
+{% endset %}
 
 <script type="module">
     {{jsasync | jsmin | safe}}

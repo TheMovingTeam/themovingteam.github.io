@@ -1,10 +1,27 @@
 <nav>
     <div class="hc ac jsb reflow">
-    <a class="logo" href="/">Move</a>
+    <a class="logo" 
+        {% if title != "Universal transit" %}
+        href="/"
+        {% else %}
+        href="#top"
+        {% endif %}
+        >
+        Move
+    </a>
     <div class="hc ac jc fw">
+        {% if title != "About Move" %}
         <a class="entry" href="/about/">About</a>
+        {% endif %}
+        {% if title != "Changelog" %}
         <a class="entry" href="/changelog/">Changelog</a>
+        {% endif %}
+        {% if title != "Privacy Policy" %}
+        <a class="entry" href="/privacy/">Privacy policy</a>
+        {% endif %}
+        {% if title != "Universal transit" %}
         <a class="accentButton" href="/#sign-up">Sign up for the waitlist</a>
+        {% endif %}
     </div>
     </div>
 </nav>

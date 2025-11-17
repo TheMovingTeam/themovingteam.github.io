@@ -76,4 +76,7 @@ img {
 .ha-placeholder, .ha {
     transition-property: opacity;
     transition-duration: 250ms;
+
+    -webkit-user-select: none;
+    user-select: none;
 }

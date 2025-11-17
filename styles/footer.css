@@ -26,19 +26,16 @@ footer {
         margin: calc(var(--margin) / 2) var(--margin);
         align-items: start;
 
-        & a {
-            text-decoration: none;
-        }
+    }
+
+    & .jsb {
+        margin-top: calc(var(--margin) / 2);
+        align-items: end;
     }
 
     &>.hc {
         width: 100%;
         justify-content: space-between;
-        align-items: center;
-    }
-
-    & * {
-        color: white
     }
 
     &>.shape {
@@ -53,5 +50,15 @@ footer {
         animation: rotate 12s linear forwards infinite;
         mix-blend-mode: soft-light;
         opacity: 0.25;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+
+    span#copyright {
+        opacity: 0.6;
+        user-select: none;
+        -webkit-user-select: none;
     }
 }

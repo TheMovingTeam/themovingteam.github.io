@@ -17,9 +17,13 @@
 }
 
 
-html:not([data-scroll='0']) {
+html[data-scroll='0'] {
+    nav {
+        background-color: transparent !important;
+    }
     .logo {
-        opacity: 1 !important;
+        opacity: 0 !important;
+        pointer-events: none;
     }
 }
 
