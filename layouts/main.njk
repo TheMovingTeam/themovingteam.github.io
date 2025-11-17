@@ -7,6 +7,7 @@
     <meta name="darkreader-lock">
 
     <title>Move - {{ title }}</title>
+    <meta name="description" content="{{ description }}">
 
     <link rel="preconnect" href="/media">
     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
@@ -23,9 +24,7 @@
     {% include "../styles/nav.css" %}
 
     {%- if isHero %}
-
     {% include "../styles/hero.css" %}
-
     {%- else %}
     {% include "../styles/article.css" %}
     {%- endif %}

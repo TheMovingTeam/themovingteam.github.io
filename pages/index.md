@@ -1,6 +1,7 @@
 ---
 layout: index.njk
 title: Universal transit
+description: The landing page for the best transit app coming to android
 ---
 
 <div class="featureEntry vc">
