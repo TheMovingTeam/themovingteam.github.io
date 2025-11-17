@@ -6,15 +6,16 @@ html:not([data-scroll='0']) {
 }
 
 nav {
-    transition: background-color 200ms;
-    transition-timing-function: linear;
+    transition-property: background-color, width, height, padding;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
 
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
 
-    width: calc(100% - 2 * var(--margin));
+    width: calc(100vw - var(--margin) * 2);
 
     background-color: rgba(from var(--primary-brand) r g b / 0.45);
 

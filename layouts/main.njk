@@ -7,6 +7,7 @@
     <meta name="darkreader-lock">
 
     <title>Move - {{ title }}</title>
+    <meta name="description" content="{{ description }}">
 
     <link rel="preconnect" href="/media">
     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
@@ -18,21 +19,21 @@
         rel="stylesheet">
 
     {% set css %}
-    {% include "../styles/main.css" %}
-    {% include "../styles/footer.css" %}
+    
+    {% include "../styles/common.css" %}
 
     {%- if isHero %}
-
     {% include "../styles/hero.css" %}
-
     {%- else %}
     {% include "../styles/article.css" %}
-    {% include "../styles/nav.css" %}
     {%- endif %}
 
     {%- if isAbout %}
     {% include "../styles/about.css" %}
     {%- endif %}
+
+    {% include "../styles/footer.css" %}
+    {% include "../styles/nav.css" %}
 
     {% endset %}
 
@@ -44,9 +45,7 @@
 
 
 <body>
-    {% if not isHero %}
     {% include "./components/nav.njk" %}
-    {% endif %}
 
     {{ content | safe }}
 
@@ -54,8 +53,9 @@
 </body>
 
 {% set js %}
+
 {# Always include #}
-{% include "../src/main.js"%}
+{% include "../src/scroll.js"%}
 
 {%- if isHero %}
 
@@ -75,9 +75,9 @@
 </script>
 
 {%- if not isHero %}
-{% set jsasync%}
+{% set jsasync %}
 {% include "../node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
-{% endset%}
+{% endset %}
 
 <script type="module">
     {{jsasync | jsmin | safe}}

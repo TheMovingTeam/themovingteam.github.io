@@ -14,12 +14,44 @@
     #featureIndicator {
         margin-bottom: 0 !important;
     }
+
+    #supportedProviders {
+        & h2 {
+            position: relative !important;
+            left: calc(var(--margin) / 2) !important;
+            translate: unset !important;
+            width: 100vw !important;
+
+            &::before, &::after {
+                translate: 0 82.5%;
+            }
+
+            &::before {
+                left: unset !important;
+                right: calc(var(--img-size) * 0.8)!important;
+            }
+
+            &::after {
+                right: unset !important;
+                left: calc(var(--img-size) * -0.75) !important;
+            }
+        }
+    }
 }
 
 
-html:not([data-scroll='0']) {
-    .logo {
-        opacity: 1 !important;
+html[data-scroll='0'] {
+    nav {
+        background-color: transparent !important;
+        width: calc(100vw - var(--margin));
+        padding: calc(var(--margin) / 2) !important;
+
+        & .logo {
+            opacity: 0 !important;
+            --text-size: 0px !important;
+            filter: blur(15px);
+            pointer-events: none;
+        }
     }
 }
 
@@ -63,8 +95,11 @@ h2 {
 
     width: 100vw;
     height: 100vh;
+    overflow-x: clip;
 
-    filter: blur(30px) opacity(0.25);
+    &>div {
+        filter: blur(30px) opacity(0.25);
+    }
 }
 
 .blob {
@@ -251,6 +286,7 @@ form {
 
 #features {
     padding: calc(var(--margin) * 2) 0;
+    padding-bottom: 0;
 }
 
 
@@ -288,5 +324,70 @@ form {
             opacity: 1;
             width: calc(var(--size) * 2);
         }
+    }
+}
+
+#supportedProviders {
+    --scrollTo: -50%;
+    padding: var(--margin);
+    overflow: hidden;
+    width: calc(100vw - var(--margin) * 2);
+
+    & h2 {
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        z-index: 2;
+
+        text-wrap: nowrap;
+        padding: calc(var(--img-size) / 1.5 - var(--text-size)) calc(var(--margin) / 2);
+
+        background-color: var(--background);
+
+        &::before {
+            --angle: 90deg;
+            left: calc(var(--img-size) * -1);
+        }
+
+        &::after {
+            --angle: 270deg;
+            right: calc(var(--img-size) * -1);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+
+            position: absolute;
+
+            top: -25%;
+
+            width: var(--img-size);
+            height: calc(var(--img-size) * 1.5);
+
+            backdrop-filter: blur(5px) brightness(0.75);
+            mask: linear-gradient(calc(var(--angle) * -1), #000 0%, #0000 100%);
+        }
+    }
+
+    & #providerScroller {
+        animation: scroll 6s linear infinite forwards;
+    }
+
+    & img {
+        height: var(--img-size);
+        aspect-ratio: 1;
+        border-radius: calc(var(--img-size) / 4);
+        background-color: white;
+    }
+}
+
+@keyframes scroll {
+    from {
+        translate: -25% 0;
+    }
+
+    to {
+        translate: -50% 0;
     }
 }

@@ -1,13 +1,14 @@
 ---
 layout: about.njk
 title: About Move
+description: About Move's origins, mision, vision, values and contact information
 ---
 
 # {{ title }}
 
 Move was started as a solo project by FatDawlf out of a frustration with their local bus app being annoyingly slow to open and clunky to use.
 
-The idea to make a replacement quickly evolved into the univeral app we aim to build now.
+The idea to make a replacement quickly evolved into the universal app we aim to build now.
 
 ## Mission
 
