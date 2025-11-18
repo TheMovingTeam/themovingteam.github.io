@@ -8,6 +8,13 @@
 
     <title>Move - {{ title }}</title>
     <meta name="description" content="{{ description }}">
+    {% if keywords != "" %}
+    <meta name="keywords" content="{{ keywords }}">
+    {% endif %}
+
+    {%- if isHero %}
+    <link rel="canonical" href="https://movetransit.app/">
+    {%- endif %}
 
     <link rel="preconnect" href="/media">
     <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">

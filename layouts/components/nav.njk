@@ -1,7 +1,7 @@
 <nav>
     <div class="hc ac jsb reflow">
     <a class="logo" 
-        {% if title != "Universal transit" %}
+        {% if not isHero %}
         href="/"
         {% else %}
         href="#top"
@@ -19,7 +19,7 @@
         {% if title != "Privacy Policy" %}
         <a class="entry" href="/privacy/">Privacy</a>
         {% endif %}
-        {% if title != "Universal transit" %}
+        {% if not isHero %}
         <a class="accentButton" href="/#sign-up">Sign up for the waitlist</a>
         {% endif %}
     </div>

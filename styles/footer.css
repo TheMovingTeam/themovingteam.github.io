@@ -11,8 +11,9 @@
 
 }
 
-
 footer {
+    width: calc(100vw - var(--margin));
+
     background-color: var(--primary-shadow);
 
     padding: calc(var(--margin) / 2) var(--margin);

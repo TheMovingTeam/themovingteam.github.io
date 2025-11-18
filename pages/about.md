@@ -1,7 +1,7 @@
 ---
 layout: about.njk
 title: About Move
-description: About Move's origins, mision, vision, values and contact information
+description: All about Move's origins, mision, vision, values and contact information
 ---
 
 # {{ title }}

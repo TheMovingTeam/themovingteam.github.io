@@ -22,13 +22,14 @@
             translate: unset !important;
             width: 100vw !important;
 
-            &::before, &::after {
+            &::before,
+            &::after {
                 translate: 0 82.5%;
             }
 
             &::before {
                 left: unset !important;
-                right: calc(var(--img-size) * 0.8)!important;
+                right: calc(var(--img-size) * 0.8) !important;
             }
 
             &::after {
@@ -365,7 +366,7 @@ form {
             width: var(--img-size);
             height: calc(var(--img-size) * 1.5);
 
-            backdrop-filter: blur(5px) brightness(0.75);
+            backdrop-filter: blur(5px) saturate(1.5) brightness(0.75);
             mask: linear-gradient(calc(var(--angle) * -1), #000 0%, #0000 100%);
         }
     }
@@ -378,6 +379,7 @@ form {
         height: var(--img-size);
         aspect-ratio: 1;
         border-radius: calc(var(--img-size) / 4);
+
         background-color: white;
     }
 }

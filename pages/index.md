@@ -1,7 +1,8 @@
 ---
 layout: hero.njk
-title: Universal transit
-description: The landing page for the best transit app coming to android
+title: Universal transit app
+description: Move is a universal public transit app for android that allows users to check the time estimates for buses, tram and other methods of transit in a fast and efficient manner.
+keywords: public transit app, bus app
 ---
 
 <div class="featureEntry vc">

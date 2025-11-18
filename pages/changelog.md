@@ -1,7 +1,7 @@
 ---
 layout: article.njk
 title: Changelog
-description: All recent changes in the Move app
+description: All recent changes in the Move transit app for Android
 ---
 
 # {{ title }}
