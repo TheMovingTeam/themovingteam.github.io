@@ -12,6 +12,10 @@
     <meta name="keywords" content="{{ keywords }}">
     {% endif %}
 
+    {% if thumbnail != "" %}
+    {% include "./components/opengraph.njk" %}
+    {%- endif %}
+
     {%- if isHero %}
     <link rel="canonical" href="https://movetransit.app/">
     {%- endif %}
@@ -71,10 +75,6 @@
 
 {%- endif %}
     
-{%- if isAbout %}
-{% include "../src/switcheroo.js"%}
-{%- endif %}
-
 {% endset %}
 
 <script>

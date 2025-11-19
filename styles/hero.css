@@ -44,8 +44,10 @@
 html[data-scroll='0'] {
     nav {
         background-color: transparent !important;
-        width: calc(100vw - var(--margin));
-        padding: calc(var(--margin) / 2) !important;
+
+        &>.hc {
+            padding: calc(var(--margin) / 2);
+        }
 
         & .logo {
             opacity: 0 !important;

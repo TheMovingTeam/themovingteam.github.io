@@ -3,6 +3,8 @@ layout: article.njk
 title: Privacy Policy
 description: Move's privacy policy
 updated: 14/11/2025
+
+tags: destination
 ---
 
 # {{ title }}

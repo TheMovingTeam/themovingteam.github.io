@@ -1,12 +1,12 @@
 html:not([data-scroll='0']) {
     & nav {
         background-color: rgba(from var(--primary-brand) r g b / 0.75);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px) saturate(1.5) brightness(0.6);
     }
 }
 
 nav {
-    transition-property: background-color, width, height, padding;
+    transition-property: background-color, height;
     transition-timing-function: ease-out;
     transition-duration: 0.2s;
 
@@ -15,11 +15,17 @@ nav {
     left: 0;
     z-index: 99;
 
-    width: calc(100vw - var(--margin) * 2);
-
+    width: 100%;
     background-color: rgba(from var(--primary-brand) r g b / 0.45);
 
-    padding: calc(var(--margin) / 2) var(--margin);
+
+    &>.hc {
+        transition-property: padding;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+
+        padding: calc(var(--margin) / 2) var(--margin);
+    }
 
     & a {
         text-decoration: none;
