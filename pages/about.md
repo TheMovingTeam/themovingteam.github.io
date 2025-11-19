@@ -27,7 +27,10 @@ Move aims to make a better future by removing the friction to acquire the good h
 
 Move follows values to steer our work.
 
-<div id="valueCards" class="hc reflow fw">
+<!-- Terminate content div to allow articles to grow to the full width -->
+</div>
+
+<div id="valueCards" class="hc reflow">
 
 <div class="card vc">
 
@@ -35,7 +38,6 @@ Move follows values to steer our work.
 
 Make solutions that work fast and lean, avoiding complexity when it's not required.
 
-<!-- Terminate content div to allow articles to grow to the full width -->
 </div>
 
 <div class="card vc">

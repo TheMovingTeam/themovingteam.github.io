@@ -21,9 +21,9 @@ function storeScroll() {
     if (document.querySelector(".logoContainer") != undefined) {
         var factor = 0
         if (window.innerWidth > 768) {
-            factor = 2.8
-        } else {
             factor = 4
+        } else {
+            factor = 6
         }
 
         const scrolled = Math.min(Math.max((scrollTop / ((scrollHeight - clientHeight) / factor)) - 1, 0), 1);

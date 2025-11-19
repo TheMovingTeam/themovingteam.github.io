@@ -10,7 +10,7 @@
     transition-duration: 0.2s;
     width: 70%;
 
-    &>* {
+    &>.card {
         width: 85%;
     }
 

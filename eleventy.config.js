@@ -37,6 +37,10 @@ export default async function(eleventyConfig) {
         return format(date, dateFormat)
     })
 
+    eleventyConfig.addFilter("head", (arr, num) => {
+        return num ? arr.slice(0, num) : arr;
+    });
+
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents))
 };
 

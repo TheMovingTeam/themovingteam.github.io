@@ -52,6 +52,35 @@ isHero: true
     </div>
 </section>
 
+<section class="gc" id="articles">
+    <h2>Recent articles</h2>
+    <div class="hc ac jse reflow" id="articleList">
+        {% for article in collections.articles | head(2) %}
+
+        <div class="article card vc">
+            <a href="/articles/{{ article.fileSlug | slugify }}">
+                <img src="/media/thumbs/{{ article.data.thumbnail }}.png" loading="lazy" alt="{{ article.data.description }}">
+                <div class="content">
+                    <h3>{{ article.data.title }}</h3>
+                    <p>{{ article.data.description }}</p>
+                </div>
+            </a>
+        </div>
+
+        {% endfor %}
+        
+        <div class="article card vc" id="moreArticles">
+            <a href="/articles">
+                <img src="/media/logo-arrow.svg" loading="lazy" alt="Move transit app's logo arrow">
+                <div class="content">
+                    <h3>More articles</h3>
+                    <p>Read all other articles here.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
 <section id="sign-up" class="gc">
     <div class="hc ac reflow jse card">
         <p>Sign-ups coming soon!</p>

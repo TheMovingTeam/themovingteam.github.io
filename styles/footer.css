@@ -12,18 +12,19 @@
 }
 
 footer {
-    width: calc(100vw - var(--margin));
-
+    width: 100%;
     background-color: var(--primary-shadow);
 
-    padding: calc(var(--margin) / 2) var(--margin);
     margin-top: var(--margin);
 
     position: relative;
     overflow: hidden;
 
-    &>.vc {
-        margin: calc(var(--margin) / 2) var(--margin);
+    & #footerWrap {
+        padding: calc(var(--margin) / 2) var(--margin);
+    }
+
+    & .vc {
         align-items: start;
 
     }
@@ -33,12 +34,12 @@ footer {
         align-items: end;
     }
 
-    &>.hc {
+    & .hc {
         width: 100%;
         justify-content: space-between;
     }
 
-    &>.shape {
+    & .shape {
         position: absolute;
 
         right: 0;
