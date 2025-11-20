@@ -7,7 +7,7 @@
     <meta name="darkreader-lock">
 
     <title>Move - {{ title }}</title>
-    <meta name="description" content="{{ description }}">
+    <meta name="description" content="{{ description or page.excerpt }}">
     {% if keywords != "" %}
     <meta name="keywords" content="{{ keywords }}">
     {% endif %}

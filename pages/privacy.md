@@ -7,8 +7,6 @@ updated: 14/11/2025
 tags: destination
 ---
 
-# {{ title }}
-
 Last updated: {{ updated }}
 
 This article describes how your data may be collected, stored used, and/or shared ("processed") when using Move ("the application", "the app", etc.) or any services from the Move Team ("we", "us", etc.).

@@ -6,8 +6,6 @@ description: All recent changes in the Move transit app for Android
 tags: destination
 ---
 
-# {{ title }}
-
 Here are the latest changes for the Move app.
 
 ## 0.12 - November 12, 2025

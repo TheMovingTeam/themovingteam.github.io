@@ -10,8 +10,6 @@ eleventyImport:
   collections: ["articles"]
 ---
 
-# Articles
-
 Read up on all articles about the Move transit app
 
 <!-- Terminate content div to allow articles to grow to the full width -->
@@ -25,13 +23,13 @@ Read up on all articles about the Move transit app
 
 <a href="{{ article.fileSlug | slugify }}">
 
-<img src="/media/thumbs/{{ article.data.thumbnail }}.png" loading="lazy" alt="{{ article.data.description }}">
+<img src="/media/thumbs/{{ article.data.thumbnail }}.png" loading="lazy" alt="">
 
 <div class="content">
 
 ### {{ article.data.title }}
 
-{{ article.data.description }}
+{{ article.page.excerpt | head:175 }}
 
 </div>
 

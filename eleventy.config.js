@@ -2,6 +2,7 @@ import { IdAttributePlugin } from "@11ty/eleventy"
 import { minify } from "terser";
 import YAML from "yaml";
 import { format } from "date-fns"
+import stripMarkdown from "strip-markdown"
 
 export default async function(eleventyConfig) {
     // Folders
@@ -10,6 +11,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.setDataDirectory("../data/")
 
     eleventyConfig.addPassthroughCopy("./media/")
+    eleventyConfig.addPassthroughCopy("./robots.txt")
 
     eleventyConfig.addWatchTarget("./pages/**/*")
     eleventyConfig.addWatchTarget("./src/*")
@@ -29,13 +31,18 @@ export default async function(eleventyConfig) {
         }
     });
 
+    eleventyConfig.setFrontMatterParsingOptions({
+        excerpt: true,
+        excerpt_separator: "<!-- excerpt -->",
+    });
+
     eleventyConfig.addFilter("firstWord", (str) => {
         return str.split(" ")[0]
-    })
+    });
 
     eleventyConfig.addFilter('date', function(date, dateFormat) {
         return format(date, dateFormat)
-    })
+    });
 
     eleventyConfig.addFilter("head", (arr, num) => {
         return num ? arr.slice(0, num) : arr;
