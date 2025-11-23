@@ -1,13 +1,16 @@
 ---
 title: "Announcing: Move!"
 thumbnail: placeholder
-date: 2025-11-20
 
 author: Azakidev
 ---
 
-You should not be able to read this, and yet here you are.
+After months of work, it is finally time to announce that the open beta is nearing it's opening time.
 
 <!-- excerpt -->
 
-Quite nosy, aren't you?
+Move has been in development for almost three months now with a lot of experimentation and personal growth in the process.
+
+It released in a closed beta for my friends and family last month to iron out most issues regarding the core functionality of the app.
+
+Since then I've moved on to support 13 different services across 8 different regions and it's quickly approaching the threshold of an open beta in Spain!
