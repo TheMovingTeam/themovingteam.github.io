@@ -1,10 +1,13 @@
 ---
-layout: about.njk
+layout: article.njk
 title: About Move
 description: All about Move's origins, mision, vision, values and contact information
 
 tags: destination
+isAbout: true
 ---
+
+<img src="/media/banner.svg" alt="Move transit's banner art, containing an abstract bus">
 
 # {{ title }}
 

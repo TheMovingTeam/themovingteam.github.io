@@ -31,20 +31,20 @@
 
     {% set css %}
     
-    {% include "../styles/common.css" %}
+    {% include "./styles/common.css" %}
 
     {%- if isHero %}
-    {% include "../styles/hero.css" %}
+    {% include "./styles/hero.css" %}
     {%- else %}
-    {% include "../styles/article.css" %}
+    {% include "./styles/article.css" %}
     {%- endif %}
 
     {%- if isAbout %}
-    {% include "../styles/about.css" %}
+    {% include "./styles/about.css" %}
     {%- endif %}
 
-    {% include "../styles/footer.css" %}
-    {% include "../styles/nav.css" %}
+    {% include "./styles/footer.css" %}
+    {% include "./styles/nav.css" %}
 
     {% endset %}
 
@@ -52,8 +52,6 @@
         {{ css | safe }}
     </style>
 </head>
-
-
 
 <body>
     {% include "./components/nav.njk" %}
@@ -66,28 +64,28 @@
 {% set js %}
 
 {# Always include #}
-{% include "../src/scroll.js"%}
+{% include "./src/scroll.js"%}
 
 {%- if isHero %}
 
-{% include "../src/form.js"%}
-{% include "../src/carrousel.js"%}
+{% include "./src/form.js"%}
+{% include "./src/carrousel.js"%}
 
 {%- endif %}
     
 {% endset %}
 
 <script>
-    {{js | jsmin | safe}}
+    {{ js | jsmin | safe }}
 </script>
 
 {%- if not isHero %}
 {% set jsasync %}
-{% include "../node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
+{% include "../../node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
 {% endset %}
 
 <script type="module">
-    {{jsasync | jsmin | safe}}
+    {{ jsasync | jsmin | safe }}
 </script>
 
 {%- endif %}

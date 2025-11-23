@@ -7,15 +7,11 @@ import stripMarkdown from "strip-markdown"
 export default async function(eleventyConfig) {
     // Folders
     eleventyConfig.setInputDirectory("pages/");
-    eleventyConfig.setLayoutsDirectory("../layouts/");
-    eleventyConfig.setDataDirectory("../data/")
 
     eleventyConfig.addPassthroughCopy("./media/")
     eleventyConfig.addPassthroughCopy("./robots.txt")
 
     eleventyConfig.addWatchTarget("./pages/**/*")
-    eleventyConfig.addWatchTarget("./src/*")
-    eleventyConfig.addWatchTarget("./styles/*")
 
     // Plugins
     eleventyConfig.addPlugin(IdAttributePlugin);

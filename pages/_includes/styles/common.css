@@ -80,6 +80,9 @@ h6 {
     font-family: 'Nunito', sans-serif;
 }
 
+p:empty {
+    display: none;
+}
 
 .logo {
     --text-size: var(--text-large);

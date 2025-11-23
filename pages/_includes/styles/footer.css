@@ -51,6 +51,10 @@ footer {
         animation: rotate 12s linear forwards infinite;
         mix-blend-mode: soft-light;
         opacity: 0.25;
+
+        user-select: none;
+        -webkit-user-select: none;
+        pointer-events: none;
     }
 
     & a {

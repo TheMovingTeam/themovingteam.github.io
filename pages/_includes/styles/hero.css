@@ -66,18 +66,18 @@ nav>.logo {
 .heroContainer {
     width: 100vw;
     height: 100vh;
-}
 
-#heroLogo {
-    --text-size: var(--text-hero);
-    font-family: 'Fredoka';
-    font-size: var(--text-size);
-    font-weight: 600;
-    letter-spacing: -0.2px;
-}
+    & h1 {
+        --text-size: var(--text-hero);
+        font-family: 'Fredoka';
+        font-size: var(--text-size);
+        font-weight: 600;
+        letter-spacing: -0.2px;
+    }
 
-#heroCTA {
-    margin-top: var(--margin);
+    & p:last-of-type {
+        margin-top: var(--margin);
+    }
 }
 
 p {
