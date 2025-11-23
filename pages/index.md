@@ -22,6 +22,22 @@ The universal public transit app
 {% include "./_includes/components/blobs.njk" %}
 </div>
 
+<section class="gc" id="introduction">
+<div class="vc ac">
+
+## What is Move?
+
+Move is a blazingly fast public transit app for Android designed to get you where you need to go without the clutter or delays common in most navigation tools.
+
+Built with a local-first design, Move stores essential data directly on your device to ensure instant load times and reliable access to the information even when your connection is spotty.
+
+Furthermore, its focus on usability creates a seamless transit app experience that prioritizes immediate access to what you need. Making it the ideal universal transit companion for daily commuters who value speed and straightforward usability above all else, whether it's over bus, tram, or anything else.
+
+It's, in few words, the universal transit app for the people.
+
+</div>
+</section>
+
 <section class="gc" id="features">
 <div class="hc ac reflow jse card">
 <div class="vc ac">
