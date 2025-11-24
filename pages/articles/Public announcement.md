@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: "Announcing: Move!"
 thumbnail: placeholder-banner
 date: 2025-11-24

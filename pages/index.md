@@ -4,7 +4,7 @@ title: Universal transit app
 description: Move is a universal public transit app for android that allows users to check the time estimates for buses, tram and other methods of transit in a fast and efficient manner.
 keywords: public transit app, bus app
 
-signUpOpen: true
+signUpOpen: false
 isHero: true
 ---
 

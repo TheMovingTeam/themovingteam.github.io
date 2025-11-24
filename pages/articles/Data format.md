@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 title: "The Move Data Format"
 description: Detailing the data format of the Move transit app
 thumbnail: placeholder
