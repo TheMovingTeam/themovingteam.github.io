@@ -1,0 +1,49 @@
+html:not([data-scroll='0']) {
+    & nav {
+        background-color: rgba(from var(--primary-brand) r g b / 0.75);
+        backdrop-filter: blur(20px) saturate(1.5) brightness(0.6);
+    }
+}
+
+nav {
+    transition-property: background-color, height;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    width: 100%;
+    background-color: rgba(from var(--primary-brand) r g b / 0.45);
+
+
+    &>.hc {
+        transition-property: padding;
+        transition-timing-function: ease-out;
+        transition-duration: 0.2s;
+
+        padding: calc(var(--margin) / 2) var(--margin);
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
+
+        &.entry {
+            --text-size: var(--text-small);
+
+            font-weight: 400;
+            font-family: 'Nunito';
+
+            transition-timing-function: linear;
+            transition-duration: 0.2s;
+            transition-delay: 0.1s;
+
+            &:hover {
+                letter-spacing: 1.1px;
+            }
+        }
+    }
+}

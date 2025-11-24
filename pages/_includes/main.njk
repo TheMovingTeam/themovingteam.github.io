@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock">
+
+    <title>Move - {{ title }}</title>
+    <meta name="description" content="{{ description or page.excerpt }}">
+    {% if keywords != "" %}
+    <meta name="keywords" content="{{ keywords }}">
+    {% endif %}
+
+    {% if thumbnail != "" %}
+    {% include "./components/opengraph.njk" %}
+    {%- endif %}
+
+    {%- if isHero %}
+    <link rel="canonical" href="https://movetransit.app/">
+    {%- endif %}
+
+    <link rel="preconnect" href="/media">
+    <link rel="shortcut icon" href="/media/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://kit.fontawesome.com">
+     <script src="https://kit.fontawesome.com/00d9ff1293.js" crossorigin="anonymous"></script>
+
+    {% set css %}
+    
+    {% include "./styles/common.css" %}
+
+    {%- if isHero %}
+    {% include "./styles/hero.css" %}
+    {%- else %}
+    {% include "./styles/article.css" %}
+    {%- endif %}
+
+    {%- if isAbout %}
+    {% include "./styles/about.css" %}
+    {%- endif %}
+
+    {% include "./styles/footer.css" %}
+    {% include "./styles/nav.css" %}
+
+    {% endset %}
+
+    <style>
+        {{ css | safe }}
+    </style>
+</head>
+
+<body>
+    {% include "./components/nav.njk" %}
+
+    {{ content | safe }}
+
+    {% include "./components/footer.njk" %}
+</body>
+
+{% set js %}
+
+{# Always include #}
+{% include "./src/scroll.js"%}
+
+{%- if isHero %}
+
+{% include "./src/form.js"%}
+{% include "./src/carrousel.js"%}
+
+{%- endif %}
+    
+{% endset %}
+
+<script>
+    {{ js | jsmin | safe }}
+</script>
+
+{%- if not isHero %}
+{% set jsasync %}
+{% include "../../node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
+{% endset %}
+
+<script type="module">
+    {{ jsasync | jsmin | safe }}
+</script>
+
+{%- endif %}
+
+</html>

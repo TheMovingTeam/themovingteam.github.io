@@ -1,0 +1,25 @@
+<nav>
+    <div class="hc ac jsb reflow">
+        <a class="logo" 
+            {% if title != "Universal transit app" %}
+            href="/"
+            {% else %}
+            href="#top"
+            {% endif %}
+            >
+            Move
+        </a>
+
+        <div class="hc ac jc fw">
+            {% for entry in collections.destination | reverse %}
+            {%- if entry.data.title != title %}
+            <a class="entry" href="{{entry.url}}">{{ entry.data.title | firstWord }}</a>
+            {%- endif %}
+            {% endfor %}
+
+            {% if not isHero %}
+            <a class="accentButton" href="/#sign-up">Sign up for the waitlist</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>

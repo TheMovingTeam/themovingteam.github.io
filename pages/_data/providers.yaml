@@ -1,0 +1,26 @@
+- id: 1
+  name: Vectalia
+
+- id: 2
+  name: Tram d'Alacant
+
+- id: 3
+  name: Metrobus Valencia
+
+- id: 4
+  name: Metrovalencia
+
+- id: 5
+  name: EMT Valencia
+
+- id: 6
+  name: Transporte de Murcia
+
+- id: 7
+  name: Transporte de Murcia y Pedanias
+
+- id: 8
+  name: Tranvia de Murcia
+
+- id: 9
+  name: EMT Madrid

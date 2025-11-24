@@ -1,8 +1,13 @@
 ---
-layout: about.njk
+layout: article.njk
 title: About Move
-description: About Move's origins, mision, vision, values and contact information
+description: All about Move's origins, mision, vision, values and contact information
+
+tags: destination
+isAbout: true
 ---
+
+<img src="/media/banner.svg" alt="Move transit's banner art, containing an abstract bus">
 
 # {{ title }}
 
@@ -25,7 +30,10 @@ Move aims to make a better future by removing the friction to acquire the good h
 
 Move follows values to steer our work.
 
-<div id="valueCardsMd" class="hc reflow fw">
+<!-- Terminate content div to allow articles to grow to the full width -->
+</div>
+
+<div id="valueCards" class="hc reflow">
 
 <div class="card vc">
 

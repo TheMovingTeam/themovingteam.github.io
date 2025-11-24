@@ -1,12 +1,18 @@
 ---
 layout: article.njk
 title: Changelog
-description: All recent changes in the Move app
+description: All recent changes in the Move transit app for Android
+
+tags: destination
 ---
 
-# {{ title }}
-
 Here are the latest changes for the Move app.
+
+## 0.13 - ???
+
+> - ### Mapa!!!
+> - Optimize time request logic
+> - UI fixes and improvements
 
 ## 0.12 - November 12, 2025
 

@@ -1,0 +1,20 @@
+@media only screen and (width < 1200px) {
+    #valueCards {
+        width: 90% !important;
+    }
+}
+
+
+#valueCards {
+    transition: width;
+    transition-duration: 0.2s;
+    width: 70%;
+
+    &>.card {
+        width: 85%;
+    }
+
+    & h3 {
+        align-self: flex-start;
+    }
+}

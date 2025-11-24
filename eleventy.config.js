@@ -1,19 +1,16 @@
 import { IdAttributePlugin } from "@11ty/eleventy"
 import { minify } from "terser";
 import YAML from "yaml";
+import { format } from "date-fns"
 
 export default async function(eleventyConfig) {
     // Folders
-    eleventyConfig.setInputDirectory("pages/*.md");
-    eleventyConfig.setLayoutsDirectory("../layouts/");
-    eleventyConfig.setDataDirectory("../data/")
-    eleventyConfig.setOutputDirectory("./_build");
+    eleventyConfig.setInputDirectory("pages/");
 
     eleventyConfig.addPassthroughCopy("./media/")
+    eleventyConfig.addPassthroughCopy("./robots.txt")
 
-    eleventyConfig.addWatchTarget("./src/*.js")
-    eleventyConfig.addWatchTarget("./styles/*.css")
-    eleventyConfig.addWatchTarget("./index.html")
+    eleventyConfig.addWatchTarget("./pages/**/*")
 
     // Plugins
     eleventyConfig.addPlugin(IdAttributePlugin);
@@ -27,6 +24,23 @@ export default async function(eleventyConfig) {
             // Fail gracefully.
             return code;
         }
+    });
+
+    eleventyConfig.setFrontMatterParsingOptions({
+        excerpt: true,
+        excerpt_separator: "<!-- excerpt -->",
+    });
+
+    eleventyConfig.addFilter("firstWord", (str) => {
+        return str.split(" ")[0]
+    });
+    
+    eleventyConfig.addFilter('date', function(date, dateFormat) {
+        return format(date, dateFormat)
+    });
+
+    eleventyConfig.addFilter("head", (arr, num) => {
+        return num ? arr.slice(0, num) : arr;
     });
 
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents))
