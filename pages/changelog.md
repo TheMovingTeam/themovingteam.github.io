@@ -8,6 +8,12 @@ tags: destination
 
 Here are the latest changes for the Move app.
 
+## 0.13 - ???
+
+> - ### Mapa!!!
+> - Optimize time request logic
+> - UI fixes and improvements
+
 ## 0.12 - November 12, 2025
 
 > - Add support for Transporte de Murcia

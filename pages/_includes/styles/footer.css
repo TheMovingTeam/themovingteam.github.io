@@ -20,6 +20,10 @@ footer {
     position: relative;
     overflow: hidden;
 
+    & * {
+        color: white;
+    }
+
     & #footerWrap {
         padding: calc(var(--margin) / 2) var(--margin);
     }
@@ -61,9 +65,27 @@ footer {
         text-decoration: none;
     }
 
-    span#copyright {
+    & .subtext {
         opacity: 0.6;
+    }
+
+    span#copyright {
         user-select: none;
         -webkit-user-select: none;
+    }
+
+    & #socials {
+        justify-content: end;
+        font-size: calc(var(--text-medium) * 0.8);
+
+        & a {
+            transition-property: font-size;
+            transition-duration: 0.2s;
+            transition-delay: 0.1s;
+
+            &:hover {
+                font-size: calc(var(--text-medium) * 0.9);
+            }
+        }
     }
 }

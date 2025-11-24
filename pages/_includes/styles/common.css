@@ -215,6 +215,13 @@ blockquote {
     border-bottom: 1px solid rgb(from white r g b / 0.1);
 }
 
+.banner {
+    width: 100%;
+    padding: var(--margin) 0;
+
+    background-color: rgb(from var(--primary-shadow) r g b / 0.35);
+}
+
 @keyframes rotate {
     from {
         rotate: 0turn;
@@ -226,6 +233,7 @@ blockquote {
 }
 
 #articleList {
+    /* flex-direction: row-reverse; */
     width: 80%;
 
     & .article {

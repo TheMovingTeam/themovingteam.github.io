@@ -4,6 +4,7 @@ title: Universal transit app
 description: Move is a universal public transit app for android that allows users to check the time estimates for buses, tram and other methods of transit in a fast and efficient manner.
 keywords: public transit app, bus app
 
+signUpOpen: true
 isHero: true
 ---
 
@@ -23,7 +24,7 @@ The universal public transit app
 </div>
 
 <section class="gc" id="introduction">
-<div class="vc ac">
+<div class="vc ac banner">
 
 ## What is Move?
 
@@ -82,7 +83,12 @@ Features are constantly being added and planned for Move. Providers are also bei
 <section id="sign-up" class="gc">
 <div class="hc ac reflow jse card">
 
+{% if not signUpOpen %}
 ## Sign-ups coming soon!
+{% else %}
+{% include "./_includes/components/signupForm.njk" %}
+{% endif %}
+
 {% include "./_includes/components/ssphone.njk" %}
 
 </div>

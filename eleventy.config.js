@@ -2,7 +2,6 @@ import { IdAttributePlugin } from "@11ty/eleventy"
 import { minify } from "terser";
 import YAML from "yaml";
 import { format } from "date-fns"
-import stripMarkdown from "strip-markdown"
 
 export default async function(eleventyConfig) {
     // Folders
@@ -35,7 +34,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addFilter("firstWord", (str) => {
         return str.split(" ")[0]
     });
-
+    
     eleventyConfig.addFilter('date', function(date, dateFormat) {
         return format(date, dateFormat)
     });

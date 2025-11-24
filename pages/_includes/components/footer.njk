@@ -11,11 +11,18 @@
                 <a class="entry" href="{{entry.url}}">{{ entry.data.title }}</a>
                 {%- endif %}
                 {% endfor %}
-                <a href="https://twitter.com/movetransit">Twitter</a>
             </div>
             <div class="vc jsb">
                 <p>Made with ❤️ with 11ty</p>
-                <span id="copyright">© FatDawlf, 2025</span>
+                <div class="vc">
+                    <p class="subtext">Follow Move</p>
+                    <div class="hc ac" id="socials">
+                        {% for item in socials %}
+                        <a href="{{ item.link }}" title="{{ item.id }}"><i class="fa-brands {{ item.icon }}"></i></a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <span class="subtext" id="copyright">© FatDawlf, 2025</span>
             </div>
         </div>
     </div>
